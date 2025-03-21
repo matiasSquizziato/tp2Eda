@@ -1,6 +1,7 @@
 package funcionesOrden;
 
 import java.sql.SQLOutput;
+import java.util.Arrays;
 
 public class funcionesOrdenamiento {
 
@@ -98,7 +99,7 @@ public class funcionesOrdenamiento {
 
                 listaNum[j] = aux; //posiciono el aux en el lugar
                 System.out.println("  - Colocando " + aux + " en la posición " + j);
-                System.out.println("Arreglo actual");
+                System.out.println("Arreglo actual"+ Arrays.toString(listaNum));
             }
 
             gap = gap / 2; // recorto el gap
