@@ -1,12 +1,10 @@
 package funcionesOrden;
 
-import java.sql.SQLOutput;
 import java.util.Arrays;
 
 public class funcionesOrdenamiento {
 
-    //array no list
-
+    //BubbleSort
     public void bubbleSort(int listaNum[], int tamano){
 
         int i, j, temp;
@@ -32,16 +30,7 @@ public class funcionesOrdenamiento {
         }
     }
 
-    //InsertionSort(arreglo):
-    //    para i desde 1 hasta longitud(arreglo) - 1:
-    //        clave = arreglo[i]
-    //        j = i - 1
-    //        mientras j >= 0 y arreglo[j] > clave:
-    //            arreglo[j + 1] = arreglo[j]
-    //            j = j - 1
-    //        arreglo[j + 1] = clave
-
-
+    //insertionSort
     public void insertionSort(int[] listaNum, int tamano) {
         int i, j, aux;
 
@@ -60,19 +49,7 @@ public class funcionesOrdenamiento {
         }
     }
 
-    //ShellSort(arreglo):
-    //    n = longitud(arreglo)
-    //    gap = n / 2
-    //    mientras gap > 0:
-    //        para i desde gap hasta n - 1:
-    //            temp = arreglo[i]
-    //            j = i
-    //            mientras j >= gap y arreglo[j - gap] > temp:
-    //                arreglo[j] = arreglo[j - gap]
-    //                j = j - gap
-    //            arreglo[j] = temp
-    //        gap = gap / 2
-
+    //ShellSort:
     public void shellSort(int[] listaNum, int tamano) {
 
         //seteo el gap
@@ -99,11 +76,31 @@ public class funcionesOrdenamiento {
 
                 listaNum[j] = aux; //posiciono el aux en el lugar
                 System.out.println("  - Colocando " + aux + " en la posición " + j);
-                System.out.println("Arreglo actual"+ Arrays.toString(listaNum));
+                System.out.println("Arreglo actual" + Arrays.toString(listaNum));
             }
 
             gap = gap / 2; // recorto el gap
         }
+    }
+
+
+    //Metodo mergeSort
+    public void mergeSort (int[] listNum, int tamano){
+
+    }
+
+    //Busqueda binaria
+    public void busquedaBinaria(int[] listNum, int elementoBus){
+
+        for (int i = 0; i < listNum.length; i++) {
+            if (listNum[i] == elementoBus){
+                System.out.println("Elemento encontrado en la pos: [" + i + "]");;  //retorno el elemento que coincide
+            } else {
+                System.out.println("En la pos: [" + i + "]" + " no se encuentra");
+            }
+        }
+
+
     }
 
 
