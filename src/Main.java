@@ -56,9 +56,13 @@ public class Main {
         //System.currentTimeMillis(); System.nanoTime();
 
 
+        //Busqueda lienal
+        funcionesOrdenamiento busquedalienal = new funcionesOrdenamiento();
+       // busquedalienal.busquedaLineal(datos.getNumeros(),2);
+
         //Busqueda binaria
-    funcionesOrdenamiento busquedaBinaria = new funcionesOrdenamiento();
-    busquedaBinaria.busquedaBinaria(datos.getNumeros(),2);
+        funcionesOrdenamiento busquedaBinaria = new funcionesOrdenamiento();
+        busquedaBinaria.busquedaBinaria(datos.getNumeros(), 2);
 
 
 

@@ -89,8 +89,8 @@ public class funcionesOrdenamiento {
 
     }
 
-    //Busqueda binaria
-    public void busquedaBinaria(int[] listNum, int elementoBus){
+    //Busqueda lineal
+    public void busquedaLineal(int[] listNum, int elementoBus){
 
         for (int i = 0; i < listNum.length; i++) {
             if (listNum[i] == elementoBus){
@@ -100,8 +100,36 @@ public class funcionesOrdenamiento {
             }
         }
 
-
     }
 
+    //Busqueda binaria
+    public void busquedaBinaria(int [] listaNum, int elementoBus) {
+
+        int izq = 0;
+        int der = listaNum.length - 1;
+
+
+        while (izq <= der) {
+            int med = izq + (der - izq) / 2;
+
+            if (listaNum[med] == elementoBus) {
+
+                System.out.println("El elemento se encontro en la pos: " + med);
+                return;
+
+            }
+
+            if (listaNum[med] < elementoBus){
+                izq = med +1;
+            } else {
+                der = med -1;
+            }
+
+
+        }
+
+        System.out.println("No se encontro el elemento");
+
+    }
 
 }
